@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-kplotting"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 plotting widget library"
+DESCRIPTION="KPlotWidget is a QWidget-derived class that provides a virtual base
+class for easy data-plotting. The idea behind KPlotWidget is that you only have
+to specify information in data units; i.e., the natural units of the data being
+plotted.  KPlotWidget automatically converts everything to screen pixel units."
+
+PKG_NAMES="libKF5Plotting5 libKF5Plotting-devel"
+libKF5Plotting5_CONTENTS="
+	usr/bin/cygKF5Plotting-5.dll
+	usr/share/doc/
+"
+libKF5Plotting_devel_REQUIRES="libQt5Core-devel libQt5Gui-devel"
+libKF5Plotting_devel_CONTENTS="
+	usr/include/KF5/KPlotting/
+	usr/include/KF5/kplotting_version.h
+	usr/lib/cmake/KF5Plotting/
+	${QT5_MKSPECSDIR#/}/modules/qt_KPlotting.pri
+	usr/lib/libKF5Plotting.dll.a
+"
